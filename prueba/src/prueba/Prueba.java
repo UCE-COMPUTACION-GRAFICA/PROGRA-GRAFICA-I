@@ -18,6 +18,7 @@ public class Prueba {
         System.out.println("Mi primera vez subiendo algo a git ");
         System.out.println("probando si se puedo hacer una actualizacion push");
         System.out.println("Hola bobis ... ya cache algo de git :c") ;
+        System.out.println(" viendo si puedo hacer un pull y bajar nueva info") ;
     }
     
 }
