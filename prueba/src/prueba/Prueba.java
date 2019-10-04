@@ -21,7 +21,7 @@ public class Prueba {
         System.out.println(" viendo si puedo hacer un pull y bajar nueva info") ;
         System.out.println(" enserio se actualizo en netbeans lo que edite en git :o :o :o ") ;
         System.out.println(" orale :v siento que me perdi de mucho :o ") ;
-        
+        System.out.println("jajaa que divertido :v ");
         
     }
     
