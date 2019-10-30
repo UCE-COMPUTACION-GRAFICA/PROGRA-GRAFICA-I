@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejercicios_arreglos;
+package ejerciciosdearreglosconlistas;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -16,37 +17,38 @@ public class Ejercicio13 {
     //́ como la proporcion del numero de veces que haya salido cada cara con respecto al total.
     //Para ello simule 6000 lanzamientos de un dado utilizando la funcion Math.random()*6 para simular cada lanzamiento. 
 
-    public static void main(String arg[]) {
+    public void Ejercicio() {
 
         Scanner entrada = new Scanner(System.in);
 
-        int lanzamientos[] = new int[600];
+        ArrayList lanzamientos = new ArrayList();
 
-      double contuno = 0;
+        //int lanzamientos[] = new int[600];
+        double contuno = 0;
         double contdos = 0;
         double contres = 0;
         double contcuatro = 0;
         double contcinco = 0;
        double contseis = 0;
 
-        for (int i = 0; i < lanzamientos.length; i++) {
-            lanzamientos[i] = (int) (Math.random() * 6);
+        for (int i = 0; i < 600; i++) {
+            lanzamientos.add((int) (Math.random() * 6));
 
-            if (lanzamientos[i] == 1) {
+            if ((int) lanzamientos.get(i) == 1) {
                 contuno++;
 
             } else {
-                if (lanzamientos[i] == 2) {
+                if ((int) lanzamientos.get(i) == 2) {
                     contdos++;
                 } else {
-                    if (lanzamientos[i] == 3) {
+                    if ((int) lanzamientos.get(i) == 3) {
                         contres++;
                     } else {
-                        if (lanzamientos[i] == 4) {
+                        if ((int) lanzamientos.get(i) == 4) {
                             contcuatro++;
 
                         } else {
-                            if (lanzamientos[i] == 5) {
+                            if ((int) lanzamientos.get(i) == 5) {
                                 contcinco++;
                             } else {
                                 contseis++;
@@ -93,20 +95,16 @@ public class Ejercicio13 {
         System.out.println("La frecuencia de la cara 5 es: " + contcinco);
         System.out.println("La frecuencia de la cara 6 es: " + contseis);
 
-        
-        
-        
         System.out.println(" ");
         //proporcion de numero de veces que haya salido con respecto al total
-          System.out.println("Proporcion de la cara uno: " + contuno + "/" + "600. " + "" + "Su porcentaje es: " + (contuno / 600) * 100 + "%");
+       
+       
+        System.out.println("Proporcion de la cara uno: " + contuno + "/" + "600. " + "" + "Su porcentaje es: " + (contuno / 600) * 100 + "%");
         System.out.println("Proporcion de la cara dos: " + contdos + "/" + "600. " + "" + "Su porcentaje es: " + (contdos / 600) * 100 + "%");
         System.out.println("Proporcion de la cara tres: " + contres + "/" + "600. " + "" + "Su porcentaje es: " + (contres / 600) * 100 + "%");
         System.out.println("Proporcion de la cara cuatro: " + contcuatro + "/" + "600. " + "" + "Su porcentaje es: " + (contcuatro / 600) * 100 + "%");
         System.out.println("Proporcion de la cara cinco: " + contcinco + "/" + "600. " + "" + "Su porcentaje es: " + (contcinco / 600) * 100 + "%");
         System.out.println("Proporcion de la cara seis: " + contseis + "/" + "600. " + "" + "Su porcentaje es: " + (contseis / 600) * 100 + "%");
-
-        
-        
 
     }
 }
