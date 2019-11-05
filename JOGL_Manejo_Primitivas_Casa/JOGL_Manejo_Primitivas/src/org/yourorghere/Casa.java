@@ -11,6 +11,7 @@ import java.awt.Frame;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.media.opengl.GL;
+import static javax.media.opengl.GL.GL_COLOR_BUFFER_BIT;
 import javax.media.opengl.GLAutoDrawable;
 import javax.media.opengl.GLCanvas;
 import javax.media.opengl.GLCapabilities;
@@ -23,7 +24,7 @@ import javax.swing.JFrame;
  * @author UCE
  */
 public class Casa extends JFrame {
-
+ float radio,a,b;
     static GL gl;
     static GLU glu;
 
@@ -73,6 +74,9 @@ public class Casa extends JFrame {
             gl.glLineWidth(7);
             gl.glColor3f(1, 0, 0
             );
+            
+            
+            
             // Creacion
             int x, y, x1, y1;
             x = 0;
@@ -94,6 +98,8 @@ public class Casa extends JFrame {
 
             gl.glEnd();
             
+            
+           
             
             //piso
 
@@ -308,6 +314,23 @@ public class Casa extends JFrame {
            
 
             gl.glEnd();
+            
+            
+            // gl.glClear(GL_COLOR_BUFFER_BIT);
+             gl.glBegin(GL.GL_POLYGON);
+            // Set the current drawing color to red
+            
+          gl.glColor3f(1,1, 0);
+           radio=15;
+            for (float i = 0; i < 10; i+=0.01f) {
+                 a=(float) (Math.cos(i)*radio);
+                b=(float) (radio*Math.sin(i));
+                 gl.glVertex2f(a+120, b+125); 
+                  
+            }
+           
+        gl.glEnd();
+            
             
             
             
