@@ -65,9 +65,15 @@ public class TrabajoTangram extends JFrame{
             
             gl.glClearColor(0, 0, 1, 0);
             
+            
+            
+            
             // Establecer los parametros de la proyección
+            
             gl.glMatrixMode(gl.GL_PROJECTION);
             gl.glLoadIdentity();
+            
+            
            glu.gluOrtho2D(0,700,0 ,700);
             
             
@@ -79,7 +85,11 @@ public class TrabajoTangram extends JFrame{
             // Creacion
             
             
-            
+            gl.glMatrixMode(gl.GL_MODELVIEW);
+              gl.glLoadIdentity();
+              gl.glPushMatrix();
+              gl.glTranslatef(10, 0, 0);
+              gl.glRotatef(20,0, 0, 0);
             //triangulo rosado
               gl.glColor3f(1f,0.3f,0.5f);
             gl.glBegin(GL.GL_TRIANGLES);
@@ -89,11 +99,17 @@ public class TrabajoTangram extends JFrame{
               gl.glVertex2f(0,700);
               
                   gl.glEnd();
-                  
+               gl.glPopMatrix();
                   
                   
             //triangulo celeste
             
+            
+            gl.glMatrixMode(gl.GL_MODELVIEW);
+              gl.glLoadIdentity();
+              gl.glPushMatrix();
+            // gl.glTranslatef(30, 50, 0);
+              gl.glRotatef(-90,1, 1, 0);
              gl.glColor3f(0,1,1);
              
             gl.glBegin(GL.GL_TRIANGLES);
@@ -104,7 +120,7 @@ public class TrabajoTangram extends JFrame{
               
                   gl.glEnd();
         
-         
+          gl.glPopMatrix();
                  // triangulo amarillo
              gl.glColor3f(1,1,0);
              
