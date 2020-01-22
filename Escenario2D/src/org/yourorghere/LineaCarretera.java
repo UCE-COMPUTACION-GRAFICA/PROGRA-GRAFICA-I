@@ -5,7 +5,7 @@
  */
 package org.yourorghere;
 
-import static org.yourorghere.Casa.gl;
+import static org.yourorghere.Main.gl;
 
 /**
  *

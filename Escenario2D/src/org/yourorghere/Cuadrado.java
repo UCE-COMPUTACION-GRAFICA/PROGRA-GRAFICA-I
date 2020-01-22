@@ -6,7 +6,7 @@
 package org.yourorghere;
 
 import javax.media.opengl.GL;
-import static org.yourorghere.Casa.gl;
+import static org.yourorghere.Main.gl;
 
 /**
  *
